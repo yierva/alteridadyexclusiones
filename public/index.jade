@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  .container
+    h1.h4
+      | Imaginación política: un 
+      a(href='/emblemas/1234567890', data-toggle='tooltip', data-placement='top', title='Emblema') vocabulario social para debatir
+    hr
+    .row
+      .col-md-6
+        p.
+          Se trata de ofrecer al debate contemporáneo sostenido entre la academia en
+          humanidades y ciencias sociales y las organizaciones sociales sobre derechos humanos un 
+          vocabulario común y crítico para pensar la contribución de la sociedad a la creación de nuevas 
+          experiencias de lo humano más allá de la dominación. Experiencias que se encuentran relatadas 
+          en testimonios de resistencia y lucha política por el reconocimiento de su potencial de cambio 
+          como en los discursos que se ofrecen para dar unidad a los sentidos heterogéneos que en esa 
+          experiencia emergen. La crítica se funda en procedimientos de lectura tomados de la práctica 
+          de la Historia de conceptos y de la teoría crítica a través de su desarrollo contemporáneo y su 
+          polémica con las tesis de Butler.
+        p
+          a.btn.btn-default Sobre el proyecto
+      .col-md-6
+        select.chosen-select(data-placeholder='Buscar')
+          option(value='')
+          optgroup(label='Lemas')
+            option Acontecimiento
+            option Alteridad
+            option Apropiación
+            option Archivo
+            option Crítica
+            option Debate
+            option Exclusión/Inclusión
+            option Experiencia
+            option Feminismos estratégicos
+            option Política
+            option Usos públicos y privados del discurso
+            option Violencia
+          optgroup(label='Emblemas')
+            option Solidaridad
+            option Vocabulario
+          optgroup(label='Preguntas')
+            option ¿Qué es una víctima?
+            option ¿Qué relación hay entre violencia y acontecimiento?
+          optgroup(label='Ensayos')
+            option Algo propio, algo diferente de sí. Ensayos sobre Dante, Baltasar Gracián y la astucia del lenguaje
+            option Interpretar en filosofía. Un estudio contemporáneo
+            option El presente cautivo. Siete variaciones sobre la experiencia moderna
+
+        br
+        br
+
+        .btn-group.btn-group-justified
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Lema
+              br
+              small.text-muted aleatorio
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Emblema
+              br
+              small.text-muted aleatorio
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Pregunta
+              br
+              small.text-muted aleatoria
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Ensayo
+              br
+              small.text-muted aleatorio
+

@@ -1,0 +1,28 @@
+// Core
+@import '../components/bootstrap/less/bootstrap.less';
+
+// Variables
+@import 'variables.less';
+
+// Chosen
+@import 'bootstrap-chosen-variables.less';
+@import 'bootstrap-chosen.less';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: @line-height-computed * 5;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: @line-height-computed;
+  background: @gray-lighter;
+}
+
+p {
+  .text-justify();
+}

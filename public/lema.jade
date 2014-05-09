@@ -1,0 +1,138 @@
+extends layout
+
+block content
+  .container
+
+    h1.h4
+      | Alteridad 
+      span.label.label-default Lema
+
+    hr
+
+    .row
+      .col-md-6
+        p.
+          Se dice de una condición que marca la relación con los otros (saberes, grupos o
+          individuos, humanos o animales, cosas y estados de cosas), es decir con lo diferente.
+          Toma también la forma de un trabajo de la diferencia* que interviniendo en la
+          constitución de subjetividades, en la formación de las identidades histórico-sociales abre
+          la conformación identitaria a los avatares del tiempo y de las circunstancias (materiales,
+          pasionales y políticas*). Además se hace uso frecuente de la noción de <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a> en la 
+          instancia de los discursos. Allí la diferencia incide sobre la unidad, la homogeneidad 
+          del sentido y de sus devenires al interior de los saberes, los argumentos y el intercambio 
+          verbal en los espacios públicos mostrando su carácter provisional a través de sus
+          empleos en el <a href="" data-toggle="tooltip" data-placement="top" title="Lema">debate</a>, la controversia, la decisión colectiva, la demanda. En ambas 
+          instancias la <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a> opera sobre las formas de <a href="" data-toggle="tooltip" data-placement="top" title="Lema">exclusión</a>* que son constitutivas 
+          de los grupos, individuos y subjetividades visibilizando las relaciones de dominio
+          que las estructuran y les dan sentido, transformando la reproducción mecánica de la 
+          subordinación en nuevas relaciones no dirigidas al dominio. Decimos entonces que la 
+          alteridad trabaja parasitariamente toda identidad, pero no se presenta como su opuesto
+          antagónico (identidad/<a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a>).
+        p.
+          Puede pensarse por lo tanto un deber de <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a>, que implica hacer públicos, 
+          sometiendo al debate argumentado, sus significados y efectos. Este deber, que no
+          imposición o coerción, es un llamado a no cancelar la demanda que viene del otro y 
+          que nos obliga a responder. Es entonces un llamado a no reducir al otro o a los otros a 
+          la figura de un ego singular o colectivo paradigmático y/o arquetípico (antropocéntrico, 
+          etnocéntrico, falocéntrico) y surge de los intercambios públicos tanto como de la praxis 
+          de la <a href="" data-toggle="tooltip" data-placement="top" title="Lema">crítica</a>*. De esta última se desprende una <a href="" data-toggle="tooltip" data-placement="top" title="Lema">política</a>* de la <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a> en defensa de 
+          la dignidad de lo extranjero, <a href="" data-toggle="tooltip" data-placement="top" title="Lema">política</a>* que trata cualquier ocasión de <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a> como 
+          singular e irreductible.
+
+      .col-md-6
+        select.chosen-select(data-placeholder='Buscar')
+          option(value='')
+          optgroup(label='Lemas')
+            option Acontecimiento
+            option Alteridad
+            option Apropiación
+            option Archivo
+            option Crítica
+            option Debate
+            option Exclusión/Inclusión
+            option Experiencia
+            option Feminismos estratégicos
+            option Política
+            option Usos públicos y privados del discurso
+            option Violencia
+          optgroup(label='Emblemas')
+            option Solidaridad
+            option Vocabulario
+          optgroup(label='Preguntas')
+            option ¿Qué es una víctima?
+            option ¿Qué relación hay entre violencia y acontecimiento?
+          optgroup(label='Ensayos')
+            option Algo propio, algo diferente de sí. Ensayos sobre Dante, Baltasar Gracián y la astucia del lenguaje
+            option Interpretar en filosofía. Un estudio contemporáneo
+            option El presente cautivo. Siete variaciones sobre la experiencia moderna
+
+        br
+        br
+        .btn-group.btn-group-justified
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Lema
+              br
+              small.text-muted aleatorio
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Emblema
+              br
+              small.text-muted aleatorio
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Pregunta
+              br
+              small.text-muted aleatoria
+            a.btn.btn-lg.btn-default(href='/lema')
+              | Ensayo
+              br
+              small.text-muted aleatorio
+
+        br
+
+        ul.nav.nav-tabs
+          li.active
+            a(href='#preguntas', data-toggle='tab') Preguntas
+          li
+            a(href='#cloud', data-toggle='tab') Nube
+          li
+            a(href='#lemas', data-toggle='tab') Lemas
+          li
+            a(href='#emblemas', data-toggle='tab') Emblemas
+
+        .tab-content(style="padding: 20px; border: 1px solid #ddd; border-top: 0;")
+          #cloud.tab-pane
+            img.img-responsive(src='/img/d3-cloud.png', alt='Tag Cloud')
+          #preguntas.tab-pane.active(style='font-size: 13px; line-height: 1.4')
+            .scrolled(style='overflow: scroll; height: 480px')
+              - for (var x = 0; x < 4; x++)
+                h3.h5 ¿Qué es una víctima?
+                p
+                  | [...] la <a href="" data-toggle="tooltip" data-placement="top" title="Lema">alteridad</a> opera sobre las formas de <a href="" data-toggle="tooltip" data-placement="top" title="Emblema">exclusión</a> 
+                  | que son constitutivas de los grupos, individuos y subjetividades 
+                  | visibilizando las relaciones de dominio que las estructuran y les dan sentido, 
+                  | transformando la reproducción mecánica de la subordinación en nuevas 
+                  | relaciones no dirigidas al dominio.
+                  | (
+                  em Este es el título del ensayo
+                  | , p. 192)
+                p
+                  a.btn.btn-xs.btn-default(href='') <span class="glyphicon glyphicon-file"></span> Leer ensayo
+                  | 
+                  a.btn.btn-xs.btn-default(href='') <span class="glyphicon glyphicon-share-alt"></span> Compartir
+                - if (x < 3)
+                  hr
+          #lemas.tab-pane
+            p
+              a.btn.btn-sm.btn-default alteridad
+              | 
+              a.btn.btn-sm.btn-default política
+              | 
+              a.btn.btn-sm.btn-default debate
+              | 
+              a.btn.btn-sm.btn-default crítica
+          #emblemas.tab-pane
+            p
+              a.btn.btn-sm.btn-default alteridad
+              | 
+              a.btn.btn-sm.btn-default debate
+              | 
+              a.btn.btn-sm.btn-default política
